@@ -11,6 +11,172 @@
       <div class="header">
         <h3>Reserve seu quarto!</h3>
       </div>
+      <div class="form-container">
+        <div class="form-header">
+          <p>Formulário</p>
+        </div>
+        <div class="form-body">
+          <h1 class="form-title">Reserve facilmente seu quarto!</h1>
+          <p>Forneça suas informações, preferências e comentários.</p>
+          <form>
+            <div class="box-input">
+              <label for="name"
+                >Nome completo <span class="required-field">*</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="block"
+                minlength="1"
+                maxlength="40"
+                placeholder="Insira seu nome e sobrenome"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="email"
+                >E-mail <span class="required-field">*</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="block"
+                placeholder="Inisra seu endereço de e-mail"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <p>
+                Documento de identidade (frente e verso)
+                <span class="required-field">*</span>
+              </p>
+              <input
+                type="file"
+                multiple
+                accept="image/png, image/jpg"
+                id="rg"
+                name="rg"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="numberofguests"
+                >Número de hóspedes <span class="required-field">*</span>
+              </label>
+              <input
+                type="number"
+                name="numberofguests"
+                id="numberofguests"
+                class="block"
+                min="1"
+                max="5"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="roomtype"
+                >Tipo do quarto <span class="required-field">*</span>
+              </label>
+              <select name="roomtype">
+                <option value="default">Padrão</option>
+                <option value="premium">Premium</option>
+                <option value="vip">VIP</option>
+              </select>
+            </div>
+            <div class="box-input">
+              <label for="checkin"
+                >Data de check-in <span class="required-field">*</span></label
+              >
+              <input
+                type="date"
+                name="checkin"
+                id="checkin"
+                class="block"
+                required
+              />
+            </div>
+            <div class="box-input">
+              <label for="checkout"
+                >Data de check-out <span class="required-field">*</span></label
+              >
+              <input
+                type="date"
+                name="checkout"
+                id="checkout"
+                class="block"
+                required
+              />
+            </div>
+            <div class="checkboxes">
+              <p>Serviços adicionais:</p>
+              <ul>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="breakfast"
+                    name="services[]"
+                    value="breakfast"
+                  />
+                  <label for="breakfast">Café da manhã</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="parking"
+                    name="services[]"
+                    value="parking"
+                  />
+                  <label for="parking">Estacionamento</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="pet-friendly"
+                    name="services[]"
+                    value="pet-friendly"
+                  />
+                  <label for="pet-friendly">Pet-friendly</label>
+                </li>
+                <li>
+                  <input
+                    type="checkbox"
+                    id="roomservice"
+                    name="services[]"
+                    value="roomservice"
+                  />
+                  <label for="roomservice">Serviço de quarto</label>
+                </li>
+              </ul>
+            </div>
+            <div class="box-input">
+              <p>Preferência de vista:</p>
+              <div class="radios">
+                <input type="radio" id="sea" name="viewpreference" />
+                <label for="sea">Vista para o mar</label>
+                <input type="radio" id="city" name="viewpreference" />
+                <label for="city">Vista para a cidade</label>
+                <input type="radio" id="both" name="viewpreference" />
+                <label for="both">Tanto faz</label>
+              </div>
+            </div>
+            <div class="textarea">
+              <label for="comment">Comentários adicionais:</label>
+              <textarea
+                name="comment"
+                id="comment"
+                placeholder="ex: Gostaria mais perto da entrada, Preciso de berço, etc."
+              ></textarea>
+            </div>
+            <div class="bottons">
+              <input type="reset" value="Limpar tudo" />
+              <br />
+              <input type="submit" value="Enviar reserva" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
